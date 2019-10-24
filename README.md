@@ -4,6 +4,9 @@ Original Design: https://dribbble.com/shots/7622608-Transaction-ETH-App
 
 Make sure to follow me on twitter: https://twitter.com/cybdom to be notified when I share the next part of the tutorial.
 
+<img src="screenshot1.png">
+<img src="screenshot2.png">
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
