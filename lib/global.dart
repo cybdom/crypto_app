@@ -29,3 +29,89 @@ List<Map<String, dynamic>> historyContainerList = [
     ],
   }
 ];
+
+List<Map<String, dynamic>> transactions_stat = [
+  {
+    'count': 73,
+    'color': Color(0xff1b4dfe),
+    'text': 'Waiting For Confirmation',
+    'text_color': Colors.white,
+  },
+  {
+    'count': 49,
+    'color': Color(0xff112f5f),
+    'text': 'Be Pairing',
+    'text_color': Colors.white,
+  },
+  {
+    'count': 9,
+    'color': Color(0xff1bc29f),
+    'text': 'In Progress',
+    'text_color': Colors.white,
+  },
+  {
+    'count': 231,
+    'color': Colors.white,
+    'text': 'Completed',
+    'text_color': Colors.black,
+    'border' : Border.all(color: Colors.black54)
+  },
+  {
+    'count': 0,
+    'color': Color(0xfff3e8d9),
+    'text': 'Objection or failure',
+    'text_color': Color(0xffe59f45),
+  },
+];
+
+List<Map<String, dynamic>> transactions = [
+  {
+    'title' : 'Street greenig project',
+    'originator' : 'Cybdom Tech',
+    'transaction_number' : '98217302193491',
+    'type' : 'Public',
+    'status' : 'Pairing',
+  },
+  {
+    'title' : 'Street greenig project',
+    'originator' : 'Cybdom Tech',
+    'transaction_number' : '98217302193491',
+    'type' : 'Public',
+    'status' : 'Pairing',
+  },
+  {
+    'title' : 'Street greenig project',
+    'originator' : 'Cybdom Tech',
+    'transaction_number' : '98217302193491',
+    'type' : 'Public',
+    'status' : 'Pairing',
+  },
+  {
+    'title' : 'Street greenig project',
+    'originator' : 'Cybdom Tech',
+    'transaction_number' : '98217302193491',
+    'type' : 'Public',
+    'status' : 'Pairing',
+  },
+  {
+    'title' : 'Street greenig project',
+    'originator' : 'Cybdom Tech',
+    'transaction_number' : '98217302193491',
+    'type' : 'Public',
+    'status' : 'Pairing',
+  },
+  {
+    'title' : 'Street greenig project',
+    'originator' : 'Cybdom Tech',
+    'transaction_number' : '98217302193491',
+    'type' : 'Public',
+    'status' : 'Pairing',
+  },
+  {
+    'title' : 'Street greenig project',
+    'originator' : 'Cybdom Tech',
+    'transaction_number' : '98217302193491',
+    'type' : 'Public',
+    'status' : 'Pairing',
+  },
+];
