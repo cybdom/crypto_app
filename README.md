@@ -2,7 +2,7 @@
 
 Original Design: https://dribbble.com/shots/7622608-Transaction-ETH-App
 
-Make sure to follow me on twitter: twitter.com/cybdom to be notified when I share the next part of the tutorial.
+Make sure to follow me on twitter: https://twitter.com/cybdom to be notified when I share the next part of the tutorial.
 
 ## Getting Started
 
