@@ -30,13 +30,14 @@ class TransactionsScreen extends StatelessWidget {
                 "Transactions",
                 style: Theme.of(context)
                     .textTheme
-                    .headline
-                    .apply(fontWeightDelta: 2, color: darkBlue),
+                    .headlineSmall
+                    ?.apply(fontWeightDelta: 2, color: darkBlue),
               ),
               SizedBox(
                 height: 15.0,
               ),
               GridView.builder(
+                physics: NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 itemCount: transactions_stat.length,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -56,21 +57,20 @@ class TransactionsScreen extends StatelessWidget {
                 "New Transactions",
                 style: Theme.of(context)
                     .textTheme
-                    .title
-                    .apply(color: darkBlue, fontWeightDelta: 2),
+                    .titleLarge
+                    ?.apply(color: darkBlue, fontWeightDelta: 2),
               ),
               Divider(
                 height: 31,
                 color: darkBlue,
               ),
-              Container(
-                height: MediaQuery.of(context).size.height / 3,
-                child: ListView.builder(
-                  itemCount: transactions.length,
-                  itemBuilder: (ctx, i) {
-                    return TransactionContainer(i: i);
-                  },
-                ),
+              ListView.builder(
+                physics: NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
+                itemCount: transactions.length,
+                itemBuilder: (ctx, i) {
+                  return TransactionContainer(i: i);
+                },
               )
             ],
           ),

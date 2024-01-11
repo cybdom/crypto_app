@@ -3,9 +3,8 @@ import 'package:flutter/material.dart';
 
 class TransactionContainer extends StatelessWidget {
   final int i;
-  const TransactionContainer({
-    Key key, this.i,
-  }) : super(key: key);
+
+  const TransactionContainer({super.key, required this.i});
 
   @override
   Widget build(BuildContext context) {
@@ -18,14 +17,13 @@ class TransactionContainer extends StatelessWidget {
                 "${transactions[i]['title']}",
                 style: Theme.of(context)
                     .textTheme
-                    .subhead
-                    .apply(color: darkBlue, fontWeightDelta: 2),
+                    .titleMedium
+                    ?.apply(color: darkBlue, fontWeightDelta: 2),
               ),
             ),
             SizedBox(width: 15),
             Container(
-              padding: EdgeInsets.symmetric(
-                  horizontal: 9.0, vertical: 5.0),
+              padding: EdgeInsets.symmetric(horizontal: 9.0, vertical: 5.0),
               decoration: BoxDecoration(
                 color: Color(0xffd5d7dc),
                 borderRadius: BorderRadius.circular(15.0),
@@ -58,27 +56,32 @@ class TransactionContainer extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[
-            RaisedButton(
+            ElevatedButton(
               child: Text("Delete"),
               onPressed: () {},
-              color: Colors.white,
-              elevation: 0,
-              shape: RoundedRectangleBorder(
-                borderRadius: new BorderRadius.circular(9.0),
-                side: BorderSide(color: Colors.black54),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.white,
+                elevation: 0,
+                shape: RoundedRectangleBorder(
+                  borderRadius: new BorderRadius.circular(9.0),
+                  side: BorderSide(color: Colors.black54),
+                ),
               ),
             ),
             SizedBox(width: 15.0),
-            RaisedButton(
+            ElevatedButton(
               child: Text(
                 "Accept",
                 style: TextStyle(color: Colors.white),
               ),
               onPressed: () {},
-              color: lightBlue,
-              elevation: 0,
-              shape: RoundedRectangleBorder(
-                borderRadius: new BorderRadius.circular(9.0),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: lightBlue,
+                elevation: 0,
+                shape: RoundedRectangleBorder(
+                  borderRadius: new BorderRadius.circular(9.0),
+                  side: BorderSide(color: Colors.black54),
+                ),
               ),
             ),
           ],

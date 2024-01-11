@@ -31,21 +31,21 @@ class HomeScreen extends StatelessWidget {
               "Hello,",
               style: Theme.of(context)
                   .textTheme
-                  .display1
-                  .apply(color: Colors.grey[500]),
+                  .headlineMedium
+                  ?.apply(color: Colors.grey[500]),
             ),
             Text(
               "Mr. $username",
               style: Theme.of(context)
                   .textTheme
-                  .display1
-                  .apply(color: darkBlue, fontWeightDelta: 2),
+                  .headlineMedium
+                  ?.apply(color: darkBlue, fontWeightDelta: 2),
             ),
             SizedBox(
               height: 15.0,
             ),
             Container(
-              padding: EdgeInsets.all(25.0),
+              padding: EdgeInsets.all(12.0),
               decoration: BoxDecoration(
                 color: darkBlue,
                 borderRadius: BorderRadius.circular(15.0),
@@ -71,8 +71,8 @@ class HomeScreen extends StatelessWidget {
                           text: "291.01",
                           style: Theme.of(context)
                               .textTheme
-                              .display1
-                              .apply(color: Colors.white, fontWeightDelta: 2),
+                              .headlineMedium
+                              ?.apply(color: Colors.white, fontWeightDelta: 2),
                         ),
                         TextSpan(text: " ETH")
                       ],
@@ -94,54 +94,63 @@ class HomeScreen extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
-                      Flexible(
-                        child: RaisedButton(
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 15.0, vertical: 11.0),
-                          color: darkBlue,
+                      Expanded(
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: darkBlue,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: new BorderRadius.circular(9.0),
+                              side: BorderSide(color: Colors.white),
+                            ),
+                          ),
                           onPressed: () {},
                           child: Text(
                             'Deposit',
                             style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold),
+                              color: Colors.white,
+                            ),
                           ),
-                          shape: RoundedRectangleBorder(
-                              borderRadius: new BorderRadius.circular(9.0),
-                              side: BorderSide(color: Colors.white)),
                         ),
                       ),
-                      Flexible(
-                        child: RaisedButton(
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 15.0, vertical: 11.0),
-                          color: darkBlue,
+                      SizedBox(
+                        width: 4,
+                      ),
+                      Expanded(
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: darkBlue,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: new BorderRadius.circular(9.0),
+                              side: BorderSide(color: Colors.white),
+                            ),
+                          ),
                           onPressed: () {},
                           child: Text(
                             'Cash',
                             style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold),
+                              color: Colors.white,
+                            ),
                           ),
-                          shape: RoundedRectangleBorder(
-                              borderRadius: new BorderRadius.circular(9.0),
-                              side: BorderSide(color: Colors.white)),
                         ),
                       ),
-                      Flexible(
-                        child: RaisedButton(
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 15.0, vertical: 11.0),
-                          color: lightBlue,
+                      SizedBox(
+                        width: 4,
+                      ),
+                      Expanded(
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: lightBlue,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: new BorderRadius.circular(9.0),
+                              side: BorderSide(color: Colors.white),
+                            ),
+                          ),
                           onPressed: () {},
                           child: Text(
                             'Deposit',
                             style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold),
-                          ),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: new BorderRadius.circular(9.0),
+                              color: Colors.white,
+                            ),
                           ),
                         ),
                       ),
@@ -152,7 +161,7 @@ class HomeScreen extends StatelessWidget {
             ),
             Container(
               margin: EdgeInsets.symmetric(vertical: 15.0),
-              height: MediaQuery.of(context).size.height / 4,
+              height: MediaQuery.of(context).size.height * .4,
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 itemCount: historyContainerList.length,
@@ -168,8 +177,8 @@ class HomeScreen extends StatelessWidget {
                     "Tender Transaction",
                     style: Theme.of(context)
                         .textTheme
-                        .title
-                        .apply(color: darkBlue, fontWeightDelta: 2),
+                        .titleLarge
+                        ?.apply(color: darkBlue, fontWeightDelta: 2),
                   ),
                 ),
                 Icon(Icons.timelapse, color: Colors.black.withOpacity(.71)),
@@ -193,8 +202,8 @@ class HomeScreen extends StatelessWidget {
                         "BlockChain Analysis Report",
                         style: Theme.of(context)
                             .textTheme
-                            .title
-                            .apply(color: darkBlue, fontWeightDelta: 2),
+                            .titleLarge
+                            ?.apply(color: darkBlue, fontWeightDelta: 2),
                       ),
                       Text(
                         "Created 20.10.2019",
@@ -212,13 +221,18 @@ class HomeScreen extends StatelessWidget {
                     children: <Widget>[
                       Text(
                         "17.00 ETH",
-                        style: Theme.of(context).textTheme.title.apply(
+                        style: Theme.of(context).textTheme.titleLarge?.apply(
                             color: Color(0xff17dcb0), fontWeightDelta: 2),
                         textAlign: TextAlign.center,
                       ),
-                      RaisedButton(
-                        color: lightBlue,
-                        child: Text("View", style: TextStyle(color: Colors.white),),
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: lightBlue,
+                        ),
+                        child: Text(
+                          "View",
+                          style: TextStyle(color: Colors.white),
+                        ),
                         onPressed: () {
                           Navigator.pushNamed(context, 'transaction');
                         },

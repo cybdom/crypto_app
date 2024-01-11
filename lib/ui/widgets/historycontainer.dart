@@ -4,10 +4,11 @@ import 'package:flutter/material.dart';
 class HistoryContainer extends StatelessWidget {
   final int id;
 
-  const HistoryContainer({Key key, @required this.id}) : super(key: key);
+  const HistoryContainer({super.key, required this.id});
+
   @override
   Widget build(BuildContext context) {
-    IconData _icon;
+    IconData? _icon;
     if (historyContainerList[id]['actionType'] == actions.add)
       _icon = Icons.add;
     else if (historyContainerList[id]['actionType'] == actions.receive)
@@ -20,7 +21,7 @@ class HistoryContainer extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(15.0),
         boxShadow: [
-          BoxShadow(color: Colors.grey[200], blurRadius: 14),
+          BoxShadow(color: Colors.grey.shade200, blurRadius: 14),
         ],
       ),
       child: Column(
@@ -60,12 +61,12 @@ class HistoryContainer extends StatelessWidget {
             "${historyContainerList[id]['title']}",
             style: Theme.of(context)
                 .textTheme
-                .title
-                .apply(color: darkBlue, fontWeightDelta: 2),
+                .titleLarge
+                ?.apply(color: darkBlue, fontWeightDelta: 2),
           ),
           Text(
             "${historyContainerList[id]['subtitle']}",
-            style: Theme.of(context).textTheme.subhead,
+            style: Theme.of(context).textTheme.titleMedium,
           ),
           Spacer(),
         ],

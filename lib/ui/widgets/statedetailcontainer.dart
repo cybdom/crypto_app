@@ -3,9 +3,8 @@ import 'package:flutter/material.dart';
 
 class StatesDetailContainer extends StatelessWidget {
   final int i;
-  const StatesDetailContainer({
-    Key key, this.i,
-  }) : super(key: key);
+
+  const StatesDetailContainer({super.key, required this.i});
 
   @override
   Widget build(BuildContext context) {
@@ -23,8 +22,10 @@ class StatesDetailContainer extends StatelessWidget {
           Expanded(
             child: Text(
               "${transactions_stat[i]['count']}",
-              style: Theme.of(context).textTheme.headline.apply(
-                  color: transactions_stat[i]['text_color']),
+              style: Theme.of(context)
+                  .textTheme
+                  .headlineSmall
+                  ?.apply(color: transactions_stat[i]['text_color']),
             ),
           ),
           Expanded(
